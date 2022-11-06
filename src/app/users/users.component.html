@@ -1,0 +1,12 @@
+<img [src]="user.photo" [alt]="user.name" />
+<h2>Nom : {{ user.name }}</h2>
+<h2>Prénom : {{ user.firstName }}</h2>
+<div>
+  <span *ngIf="hidden">Age : {{ user.age }}</span>
+  <button (click)="hideAge()">{{ buttonAge }}</button>
+</div>
+<div>
+  <label for="name">User quote: </label>
+  <input id="name" [(ngModel)]="user.quote" placeholder="quote" />
+  <p>{{ user.quote }}</p>
+</div>
